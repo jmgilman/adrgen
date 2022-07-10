@@ -6,15 +6,15 @@ A command-line tool for generating and managing Architecture Decision Records
 
 ## Why to use this tool for managing your ADRs?
 
-At a difference with other ADR file creation tools, this one has been designed for allowing the customization to 
-create mew ADR files while providing the best user experience for maintaining the created ADR files.
+At a difference with other ADR file creation tools, this one has been designed for allowing the customization to
+create new ADR files while providing the best user experience for maintaining the created ADR files.
 
 Features that this tool currently offers:
 
-* Create ADR files 
+* Create ADR files
 * Configure custom statuses: this allows you to design your ADR workflow
 * Configure a custom Markdown template file
-* Change the status of an ADR file, validating its status is we have configured custom statuses
+* Change the status of an ADR file, validating its status if we have configured custom statuses
 * Amend and Supersede relationships between ADR files
 * Adding meta attributes in the ADR files
 
@@ -29,7 +29,7 @@ Next features:
 
 ### Download the binary
 You can download the last release binary from the [releases section](https://github.com/asiermarques/adrgen/releases/latest)
-  
+
 
 ### Show the version of the ADRgen
 
@@ -41,7 +41,7 @@ adrgen version
 
 ### Initializing the project and configuration
 
-We will use the **init** command specifying where the ADR files will be written. 
+We will use the **init** command specifying where the ADR files will be written.
 
 ```
 adrgen init "docs/adrs"
@@ -110,7 +110,7 @@ For example, we can add the meta parameters to generate a static generated docum
 adrgen create "My new a" -m "components, technologies"
 ```
 
-The meta parameters will add a meta section on the top of the generated file.  
+The meta parameters will add a meta section on the top of the generated file.
 ```
 ---
 components: ""

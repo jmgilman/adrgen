@@ -1,0 +1,42 @@
+{
+  "name": "adrgen",
+  "version": "1.0.0",
+  "description": "A command-line tool for generating and managing Architecture Decision Records",
+  "main": "./build/cli.js",
+  "bin": {
+    "adrgen": "./build/cli.js"
+  },
+  "repository": "git@github.com:asiermarques/adrgen.git",
+  "author": "Asier Marqués <asiermarques@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "cucumber": "^6.0.7",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "jest": "^28.1.2",
+    "jest-cucumber": "^3.0.1",
+    "nodemon": "^2.0.19",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.4",
+    "typescript-formatter": "^7.2.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.3.0",
+    "figlet": "^1.5.2"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/cli.ts",
+    "execute": "ts-node src/cli.ts",
+    "lint": "eslint .",
+    "reformat": "tsfmt -r"
+  }
+}
