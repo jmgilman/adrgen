@@ -20,10 +20,13 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "jest": "^28.1.2",
     "jest-cucumber": "^3.0.1",
+    "jest-ts-auto-mock": "^2.1.0",
     "nodemon": "^2.0.19",
+    "ts-auto-mock": "^3.6.2",
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.2",
     "tslint": "^6.1.3",
+    "ttypescript": "^1.5.13",
     "typescript": "^4.7.4",
     "typescript-formatter": "^7.2.2"
   },

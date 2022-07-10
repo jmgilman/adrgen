@@ -16,11 +16,15 @@ export default class TemplateRenderer {
             .replace("{title}", templateData.title)
             .replace("{status}", templateData.status)
             .replace("{date}", templateData.date);
-        const content = this.renderMetadata(contentWithoutMetadata, templateData.metadata);
-        return content;
+        return `${this.renderMetadata(templateData.metadata)}\n${contentWithoutMetadata}`;
     }
 
-    renderMetadata(content: string, metadata: string[]) {
-        return content;
+    renderMetadata(metadata: Map<string, string>) {
+        if (metadata.size === 0)
+            return '';
+
+        let metadataContent = "";
+        metadata.forEach((value, key) => metadataContent += `${key}: "${value}"\n`)
+        return `---\n${metadataContent}---`;
     }
 }

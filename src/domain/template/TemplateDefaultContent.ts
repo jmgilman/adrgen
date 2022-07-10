@@ -1,5 +1,4 @@
-export default `
-# {ID} - {title}
+export default `# {ID} - {title}
 Date: {date}
 ## Status
 {status}
