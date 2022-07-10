@@ -1,6 +1,6 @@
 # ADRgen
 
-[![<ORG_NAME>](https://circleci.com/gh/asiermarques/adrgen.svg?style=svg)](https://circleci.com/gh/asiermarques/adrgen) [![Go Report Card](https://goreportcard.com/badge/github.com/asiermarques/adrgen)](https://goreportcard.com/report/github.com/asiermarques/adrgen)
+[![<ORG_NAME>](https://circleci.com/gh/asiermarques/adrgen.svg?style=svg)](https://circleci.com/gh/asiermarques/adrgen) 
 
 A command-line tool for generating and managing Architecture Decision Records
 

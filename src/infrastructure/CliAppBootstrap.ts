@@ -2,7 +2,7 @@ import * as chalk from 'chalk';
 import * as figlet from 'figlet';
 import CliCommand from './cli_commands/CliCommand';
 import VersionCommand from './cli_commands/VersionCommand';
-import {EXIT_CODE_SUCCESS} from "./CliExitCodes";
+import { EXIT_CODE_SUCCESS } from "./CliExitCodes";
 
 const VERSION = process.env.npm_package_version;
 const defaultHelp = `
