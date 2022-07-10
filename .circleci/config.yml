@@ -1,23 +1,19 @@
-version: 2.1
-orbs:
-  node: circleci/node@5.0.2
+version: 2
 jobs:
-  build_and_test: # this can be any name you choose
-    executor: node/default # use the default executor defined within the orb
+  build:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: yarn
-      - run:
-          command: yarn test
-          name: Run tests
-      - run:
-          command: yarn build
-          name: Build app
-      - persist_to_workspace:
-          root: ~/project
-          paths: .
-workflows:
-  build_test:
-    jobs:
-      - build_and_test
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn test
