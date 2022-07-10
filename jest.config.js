@@ -3,6 +3,6 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   "testMatch": [
-    "**/jest-cucumber-setup.ts"
+    "**/*.steps.ts"
   ],
 };

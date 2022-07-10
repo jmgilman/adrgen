@@ -1,10 +1,10 @@
 import CliCommand from './CliCommand';
-import {Command} from "commander";
+import { Command } from "commander";
 
-export default abstract class CommanderCliCommand implements CliCommand{
+export default abstract class CommanderCliCommand implements CliCommand {
     abstract readonly description;
     abstract readonly name;
-    abstract action(...args: any[]);
+    abstract action(...args: string[]);
     private _command: Command;
 
     protected abstract configure();
@@ -24,7 +24,7 @@ export default abstract class CommanderCliCommand implements CliCommand{
         this.configure();
     }
 
-    run(){
+    run() {
         this.setUpCommanderCliCommand();
         this._command.parse(process.argv);
     }

@@ -36,7 +36,8 @@
     "build": "tsc -p .",
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/cli.ts",
     "execute": "ts-node src/cli.ts",
-    "lint": "eslint .",
+    "lint": "yarn reformat && eslint .",
+    "test": "yarn lint && jest",
     "reformat": "tsfmt -r"
   }
 }
