@@ -1,6 +1,7 @@
 import CommanderCliCommand from "./CommanderCliCommand";
+import CliCommand from "./CliCommand";
 
-export default class VersionCommand extends CommanderCliCommand {
+export default class VersionCommand extends CommanderCliCommand implements CliCommand {
     readonly name: string = "version";
     readonly description: string = "Get the ADRGen release number";
 
@@ -10,5 +11,9 @@ export default class VersionCommand extends CommanderCliCommand {
 
     protected configure() {
         return;
+    }
+
+    run() {
+        this.runCommander();
     }
 }
