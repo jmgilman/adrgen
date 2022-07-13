@@ -10,7 +10,7 @@ import * as fs from "fs";
 
 const readerMock = createMock<TemplateContentReader>();
 const validatorMock = createMock<TemplateContentValidator>({
-    validate: () => true
+    validateOrThrowException: () => true
 });
 const renderer = new TemplateRenderer(readerMock, validatorMock);
 

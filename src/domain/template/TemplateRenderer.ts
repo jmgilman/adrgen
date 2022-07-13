@@ -1,7 +1,6 @@
 import TemplateContentReader from "./TemplateContentReader";
 import Template from "./Template";
 import TemplateDefaultContent from "./TemplateDefaultContent";
-import TemplateContentNotValid from "./TemplateContentNotValid";
 import TemplateContentValidator from "./TemplateContentValidator";
 
 export default class TemplateRenderer {
@@ -10,8 +9,8 @@ export default class TemplateRenderer {
 
     render(templateData: Template, customTemplate = false) {
         const templateContent = customTemplate ? this.templateContentReader.read() : TemplateDefaultContent;
-        if (!this.templateContentValidator.validate(templateContent))
-            throw new TemplateContentNotValid();
+        this.templateContentValidator.validateOrThrowException(templateContent);
+
         const contentWithoutMetadata = templateContent.replace("{ID}", templateData.ID)
             .replace("{title}", templateData.title)
             .replace("{status}", templateData.status)
